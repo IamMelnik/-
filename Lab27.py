@@ -2,7 +2,7 @@ n = int(input().strip())
 values = map(int, input().strip().split(" "))
 top5min = []
 
-for elem in values:
+for number in values:
     for i in range(6):
 
         # Выход из цикла при необходимости
@@ -10,13 +10,13 @@ for elem in values:
             break
 
         # Если число больше, то оно вставляется на месте меньшего
-        if elem > top5min[i]:
-            top5min.insert(i, elem)
+        if number > top5min[i]:
+            top5min.insert(i, number)
             break
 
     # Вставка в конце листа
     if i == 5 or i == len(top5min):
-        top5min.append(elem)
+        top5min.append(number)
 
     # Убирается первое число
     if len(top5min) > 5:
